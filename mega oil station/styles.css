@@ -1,0 +1,466 @@
+:root {
+    --primary-blue: #003399;
+    --primary-yellow: #FFD700;
+    --primary-red: #FF0000;
+    --dark-bg: #2A2A2A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--primary-blue);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-yellow);
+    transform: scale(1.05);
+    text-shadow: 0 0 5px var(--primary-yellow);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-red);
+}
+
+.contact-btn {
+    background: var(--primary-yellow);
+    color: var(--dark-bg) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.logo {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('path/to/your/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    background-image: url('cc789772d3f965aba612b6cb6075ef59e40e42b2.jpg');
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color-scheme: var(--primary-blue);
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-yellow);
+    color: var(--dark-bg);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    margin-top: 2rem;
+    border-radius: 4px;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 5%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.about-content h3 {
+    color: var(--primary-yellow);
+    margin-bottom: 1rem;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 5%;
+    background: #f5f5f5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Contact Form */
+.contact {
+    padding: 5rem 5%;
+    background: var(--white);
+    color: var(--dark-bg);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+}
+
+.contact-form {
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    color: blue;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: blue;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: darkred;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 2rem 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 0.5rem 0;
+}
+
+.footer-links a, .footer-contact p, .footer-social a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-social a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container,
+    .contact-container,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .logo img {
+        height: 40px;
+        max-width: 150px;
+    }
+}
+
+.location-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.map-container {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-form {
+    background-color: yellow;
+}
+
+.hero {
+   
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    color: white; /* Set text color to white for contrast */
+    text-align: center; /* Center align text */
+    padding: 100px 20px; /* Add padding for spacing */
+}
+
+.hero-content {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 100px auto 0; /* Center the content and add top margin to lower it */
+    padding: 0 20px; /* Optional: Add horizontal padding */
+    text-align: center; /* Center align text */
+}
+
+.hero h1 {
+    font-size: 2.5rem; /* Increase font size for the heading */
+    margin-bottom: 20px; /* Space below heading */
+    font-weight: bold; /* Make the heading bold */
+    color:rgb(251, 251, 253);
+}
+
+
+.cta-buttons {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center; /* Center buttons */
+    gap: 20px; /* Space between buttons */
+}
+
+.cta-button {
+    background-color: red; /* Button background color */
+    color: white; /* Button text color */
+    padding: 15px 30px; /* Padding for buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make button text bold */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.cta-button:hover {
+    background-color: darkred; /* Darken button on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.about-section {
+    background-color: white; /* Set background color to white for contrast */
+    padding: 40px; /* Add padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin: 20px 0; /* Margin for spacing between sections */
+}
+
+.about-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between text and image */
+}
+
+.text-content {
+    flex: 1; /* Allow text to take available space */
+    margin-right: 20px; /* Space between text and image */
+}
+
+.image-content {
+    flex: 1; /* Allow image to take available space */
+}
+
+.about-image {
+    max-width: 50%; /* Set the maximum width to 50% of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners to the image */
+}
+
+.contact-section {
+    background-color:blue; /* Dark background */
+    color: white; /* White text */
+    padding: 20px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    max-width: 400px; /* Max width for the card */
+    margin: 20px; /* Margin for spacing */
+    position: relative; /* Position relative for any absolute elements */
+    float: left; /* Align to the left */
+}
+
+.contact-section h2 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.contact-section p {
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+.contact-form {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.contact-form label {
+    margin-bottom: 5px; /* Space below labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form input {
+    background-color: #f7f1f1; /* Dark input background */
+    color: rgb(17, 13, 13); /* White text */
+}
+
+.contact-form textarea {
+    background-color: #444; /* Dark textarea background */
+    color: rgb(10, 9, 9); /* White text */
+}
+
+.checkbox {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* Space below checkbox */
+}
+
+.checkbox input {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+.submit-button {
+    background-color: yellow; /* Button color */
+    color: black; /* Button text color */
+    padding: 10px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+    background-color: orange; /* Change color on hover */
+}
