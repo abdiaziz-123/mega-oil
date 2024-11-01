@@ -11,8 +11,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* Navigation */
 nav {
     display: flex;
@@ -23,7 +26,7 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(77, 50, 50, 0.1);
 }
 
 .nav-links {
@@ -35,7 +38,7 @@ nav {
     text-decoration: none;
     color: var(--white);
     margin-left: 2rem;
-    font-weight: 500;
+    font-weight: bold;
     transition: color 0.3s, transform 0.3s;
 }
 
@@ -59,6 +62,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 18px;
 }
 
 .logo img {
@@ -132,30 +136,60 @@ nav {
     gap: 4rem;
 }
 
-.about-content h3 {
+.about-content h1 {
     color: var(--primary-yellow);
     margin-bottom: 1rem;
 }
+/* Add this to your styles.css */
+.link-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px; /* Padding for better size */
+    margin: 2rem 0; /* Margin for spacing */
+    text-decoration: none;
+    font-weight: bold; 
+    border-radius: 9px;
+    display: inline-block; /* Ensures the button behaves like a block element */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    transition: color 0.3s, transform 0.3s;
+}
 
+.link-button:hover {
+    background-color: darkred; /* Change color on hover */
+    transform: scale(1.05);
+    transition: color 0.3s, transform 0.5s;
+}
 .about-image {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
+    padding: 3.9rem 0;
+    overflow-x: hidden;
+    grid-gap: 50px;
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .about-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 600px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
+    overflow: hidden;
+    object-fit: cover;
+    transition: 0.3s;
 }
+/* .about-img:hover {
+    transform: scale(1.25);
+} */
 
 /* Services Section */
-.services {
+/* .services {
     padding: 5rem 5%;
     background: #f5f5f5;
+    
 }
 
 .services-grid {
@@ -177,6 +211,80 @@ nav {
     height: 200px;
     object-fit: cover;
     border-radius: 4px;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0px 8%;
+  
+}
+
+.container h1 {
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 60px;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+}
+
+.container h1::after {
+  content: '';
+  background: #303ef7;
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+
+.service {
+  text-align: center;
+  padding: 25px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background: transparent;
+  transition: transform 0.5s, background 0.5s;
+}
+
+.service i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #303ef7;
+}
+
+.service h2 {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.service:hover {
+  background: #303ef7;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.service:hover i {
+  color: #fff;
 }
 
 /* Contact Form */
@@ -401,7 +509,7 @@ footer {
     max-width: 400px; /* Max width for the card */
     margin: 20px; /* Margin for spacing */
     position: relative; /* Position relative for any absolute elements */
-    float: left; /* Align to the left */
+    
 }
 
 .contact-section h2 {
@@ -463,4 +571,231 @@ footer {
 
 .submit-button:hover {
     background-color: orange; /* Change color on hover */
+}
+@keyframes slide-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(5vh);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .card {
+      view-timeline-name: --item-timeline;
+      animation: slide-fade-in both;
+      animation-timeline: --item-timeline;
+      animation-range: contain 0% contain 50%;
+}
+  }
+  @import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/mauve.css";
+@import "@radix-ui/colors/violet.css";
+
+/* reset */
+button {
+	all: unset;
+}
+
+.DropdownMenuContent,
+.DropdownMenuSubContent {
+	min-width: 220px;
+	background-color: white;
+	border-radius: 6px;
+	padding: 5px;
+	box-shadow:
+		0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+		0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+	animation-duration: 400ms;
+	animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: transform, opacity;
+}
+.DropdownMenuContent[data-side="top"],
+.DropdownMenuSubContent[data-side="top"] {
+	animation-name: slideDownAndFade;
+}
+.DropdownMenuContent[data-side="right"],
+.DropdownMenuSubContent[data-side="right"] {
+	animation-name: slideLeftAndFade;
+}
+.DropdownMenuContent[data-side="bottom"],
+.DropdownMenuSubContent[data-side="bottom"] {
+	animation-name: slideUpAndFade;
+}
+.DropdownMenuContent[data-side="left"],
+.DropdownMenuSubContent[data-side="left"] {
+	animation-name: slideRightAndFade;
+}
+
+.DropdownMenuItem,
+.DropdownMenuCheckboxItem,
+.DropdownMenuRadioItem,
+.DropdownMenuSubTrigger {
+	font-size: 13px;
+	line-height: 1;
+	color: var(--violet-11);
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	height: 25px;
+	padding: 0 5px;
+	position: relative;
+	padding-left: 25px;
+	user-select: none;
+	outline: none;
+}
+.DropdownMenuSubTrigger[data-state="open"] {
+	background-color: var(--violet-4);
+	color: var(--violet-11);
+}
+.DropdownMenuItem[data-disabled],
+.DropdownMenuCheckboxItem[data-disabled],
+.DropdownMenuRadioItem[data-disabled],
+.DropdownMenuSubTrigger[data-disabled] {
+	color: var(--mauve-8);
+	pointer-events: none;
+}
+.DropdownMenuItem[data-highlighted],
+.DropdownMenuCheckboxItem[data-highlighted],
+.DropdownMenuRadioItem[data-highlighted],
+.DropdownMenuSubTrigger[data-highlighted] {
+	background-color: var(--violet-9);
+	color: var(--violet-1);
+}
+
+.DropdownMenuLabel {
+	padding-left: 25px;
+	font-size: 12px;
+	line-height: 25px;
+	color: var(--mauve-11);
+}
+
+.DropdownMenuSeparator {
+	height: 1px;
+	background-color: var(--violet-6);
+	margin: 5px;
+}
+
+.DropdownMenuItemIndicator {
+	position: absolute;
+	left: 0;
+	width: 25px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.DropdownMenuArrow {
+	fill: white;
+}
+
+.IconButton {
+	font-family: inherit;
+	border-radius: 100%;
+	height: 35px;
+	width: 35px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--violet-11);
+	background-color: white;
+	box-shadow: 0 2px 10px var(--black-a7);
+}
+.IconButton:hover {
+	background-color: var(--violet-3);
+}
+.IconButton:focus {
+	box-shadow: 0 0 0 2px black;
+}
+
+.RightSlot {
+	margin-left: auto;
+	padding-left: 20px;
+	color: var(--mauve-11);
+}
+[data-highlighted] > .RightSlot {
+	color: white;
+}
+[data-disabled] .RightSlot {
+	color: var(--mauve-8);
+}
+
+@keyframes slideUpAndFade {
+	from {
+		opacity: 0;
+		transform: translateY(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideRightAndFade {
+	from {
+		opacity: 0;
+		transform: translateX(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideDownAndFade {
+	from {
+		opacity: 0;
+		transform: translateY(-2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideLeftAndFade {
+	from {
+		opacity: 0;
+		transform: translateX(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@media  screen and  (max-width:600px){
+    
+}
+
+/* ========================= */
+/* Services Section Styles   */
+/* ========================= */
+.services {
+    padding: 5rem 5%;
+    text-align: center; /* Center the title */
+}
+
+.services-title {
+    font-size: 2.5rem; /* Adjust font size for the title */
+    margin-bottom: 2rem; /* Space below the title */
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns for the first row */
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items in each grid cell */
+}
+
+/* Responsive Design for Services Grid */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Change to 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
 }
