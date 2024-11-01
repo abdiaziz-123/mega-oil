@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
 </head>
 <body>
     <!-- Navigation -->
@@ -20,14 +24,14 @@
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#locations">locations</a>
-            <a href="#contact" class="contact-btn">CONTACT</a>
+            <a href="#contact" class="contact-btn">find us</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero" id="home">
         <div class="hero-content" >
-            <h1>Empowering Your Journey</h1>
+            <h1 data-aos="fade-up">Empowering Your Journey</h1>
             
             <div class="cta-buttons">
                 <a href="#services" class="cta-button">View Services</a>
@@ -40,7 +44,7 @@
     <section id="about" class="about-section">
         <div class="about-content">
             <div class="text-content">
-                <h3>About Us</h3>
+                <h1>About Us</h1>
                 <h2>Convenience and quality, always</h2>
                 <p>At Mega Oil, we redefine your fueling experience in Mbale. Our 24/7 service guarantees that you never run out of fuel, no matter the time. With a dedicated auto care unit and a state-of-the-art car wash, we ensure that your vehicle remains in top condition. Enjoy ample parking and swift service that prioritizes your needs, making every visit a breeze. Choose Mega Oil for convenience, quality, and exceptional service, day or night.</p>
                 <a href="#contact" class="link-button">Get in touch</a>
@@ -52,28 +56,37 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
-        <h3>UNMATCHED FUEL SERVICES</h3>
-        <h2>Your one-stop solution for quality care.</h2>
+    <section class="services">
+        <h2 class="services-title">Our Services</h2>
         <div class="services-grid">
-            <div class="service-card">
-                <img src="24-7-fuel-forecourt.png" alt="24/7 Fuel Station">
-                <h3>24/7 fuel station</h3>
+            <div class="service">
+              <i class="fa-regular fa-clock" style="color:#ffcd1a;"></i>
+              <h3>24/7 service</h3>
                 <p>Refuel your vehicle any time of the day or night.</p>
             </div>
-            <div class="service-card">
-                <img src="istockphoto-1347150429-.jpg" alt="Auto Care">
-                <h3>Dedicated auto care unit</h3>
+            <div class="service">
+              <i class="fa-solid fa-square-parking" style="color: #ffcd1a;"></i>
+              <h3>Parking</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quae?</p>
+            </div>
+            <div class="service">
+              <i class="fab fa-sketch"></i>
+              <h3>Car wash</h3>
+                <p>Keep your vehicle spotless with our efficient car wash.</p>
+            </div>
+            <div class="service">
+              <a href="https://www.flaticon.com/free-icons/car-wash" title="car wash icons">Car wash icons created by Flat Icons - Flaticon</a>
+              <h3>Auto care unit</h3>
                 <p>Ensure your vehicle is in top shape with our expert care.</p>
             </div>
-            <div class="service-card">
-                <img src="istockphoto-1349262258-612x612.jpg" alt="Car Wash">
-                <h3>Car wash</h3>
-                <p>Keep your vehicle spotless with our efficient car wash.</p>
+            <div class="service">
+              <i class="fa-brands fa-facebook-messenger"></i>
+                <h3>Lorem ipsum dolor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quae?</p>
             </div>
         </div>
     </section>
-
+   
     <!-- Contact Form -->
     <section id="contact" class="contact-section">
         <h2>Get in Touch</h2>
@@ -147,6 +160,11 @@
             <p>&copy; 2024 Mega Oil. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
 
     <script src="script.js"></script>
 </body>
