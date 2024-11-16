@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const menuIcon = document.getElementById("menu-icon");
+    const navLinks = document.getElementById("nav-links");
+    const menuIconBar = document.getElementById("menu-icon-bar");
+
+    menuIcon.addEventListener("click", function() {
+        navLinks.classList.toggle("show");
+
+        // Toggle icon between bars and close
+        if (navLinks.classList.contains("show")) {
+            menuIconBar.classList.replace("fa-bars", "fa-times");
+        } else {
+            menuIconBar.classList.replace("fa-times", "fa-bars");
+        }
+    });
+});
 // Form handling
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -18,145 +34,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     this.reset();
 });
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(0, 51, 153, 0.9)'; // Semi-transparent blue
-        nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    } else {
-        nav.style.background = 'var(--primary-blue)'; // Original blue color
-        nav.style.boxShadow = 'none';
-    }
-}); 
-import React from "react";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import {
-	HamburgerMenuIcon,
-	DotFilledIcon,
-	CheckIcon,
-	ChevronRightIcon,
-} from "@radix-ui/react-icons";
-import "./styles.css";
 
-const DropdownMenuDemo = () => {
-	const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
-	const [urlsChecked, setUrlsChecked] = React.useState(false);
-	const [person, setPerson] = React.useState("pedro");
-
-	return (
-		<DropdownMenu.Root>
-			<DropdownMenu.Trigger asChild>
-				<button className="IconButton" aria-label="Customise options">
-					<HamburgerMenuIcon />
-				</button>
-			</DropdownMenu.Trigger>
-
-			<DropdownMenu.Portal>
-				<DropdownMenu.Content className="DropdownMenuContent" sideOffset={5}>
-					<DropdownMenu.Item className="DropdownMenuItem">
-						New Tab <div className="RightSlot">⌘+T</div>
-					</DropdownMenu.Item>
-					<DropdownMenu.Item className="DropdownMenuItem">
-						New Window <div className="RightSlot">⌘+N</div>
-					</DropdownMenu.Item>
-					<DropdownMenu.Item className="DropdownMenuItem" disabled>
-						New Private Window <div className="RightSlot">⇧+⌘+N</div>
-					</DropdownMenu.Item>
-					<DropdownMenu.Sub>
-						<DropdownMenu.SubTrigger className="DropdownMenuSubTrigger">
-							More Tools
-							<div className="RightSlot">
-								<ChevronRightIcon />
-							</div>
-						</DropdownMenu.SubTrigger>
-						<DropdownMenu.Portal>
-							<DropdownMenu.SubContent
-								className="DropdownMenuSubContent"
-								sideOffset={2}
-								alignOffset={-5}
-							>
-								<DropdownMenu.Item className="DropdownMenuItem">
-									Save Page As… <div className="RightSlot">⌘+S</div>
-								</DropdownMenu.Item>
-								<DropdownMenu.Item className="DropdownMenuItem">
-									Create Shortcut…
-								</DropdownMenu.Item>
-								<DropdownMenu.Item className="DropdownMenuItem">
-									Name Window…
-								</DropdownMenu.Item>
-								<DropdownMenu.Separator className="DropdownMenu.Separator" />
-								<DropdownMenu.Item className="DropdownMenuItem">
-									Developer Tools
-								</DropdownMenu.Item>
-							</DropdownMenu.SubContent>
-						</DropdownMenu.Portal>
-					</DropdownMenu.Sub>
-
-					<DropdownMenu.Separator className="DropdownMenuSeparator" />
-
-					<DropdownMenu.CheckboxItem
-						className="DropdownMenuCheckboxItem"
-						checked={bookmarksChecked}
-						onCheckedChange={setBookmarksChecked}
-					>
-						<DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-							<CheckIcon />
-						</DropdownMenu.ItemIndicator>
-						Show Bookmarks <div className="RightSlot">⌘+B</div>
-					</DropdownMenu.CheckboxItem>
-					<DropdownMenu.CheckboxItem
-						className="DropdownMenuCheckboxItem"
-						checked={urlsChecked}
-						onCheckedChange={setUrlsChecked}
-					>
-						<DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-							<CheckIcon />
-						</DropdownMenu.ItemIndicator>
-						Show Full URLs
-					</DropdownMenu.CheckboxItem>
-
-					<DropdownMenu.Separator className="DropdownMenuSeparator" />
-
-					<DropdownMenu.Label className="DropdownMenuLabel">
-						People
-					</DropdownMenu.Label>
-					<DropdownMenu.RadioGroup value={person} onValueChange={setPerson}>
-						<DropdownMenu.RadioItem
-							className="DropdownMenuRadioItem"
-							value="pedro"
-						>
-							<DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-								<DotFilledIcon />
-							</DropdownMenu.ItemIndicator>
-							Pedro Duarte
-						</DropdownMenu.RadioItem>
-						<DropdownMenu.RadioItem
-							className="DropdownMenuRadioItem"
-							value="colm"
-						>
-							<DropdownMenu.ItemIndicator className="DropdownMenuItemIndicator">
-								<DotFilledIcon />
-							</DropdownMenu.ItemIndicator>
-							Colm Tuite
-						</DropdownMenu.RadioItem>
-					</DropdownMenu.RadioGroup>
-
-					<DropdownMenu.Arrow className="DropdownMenuArrow" />
-				</DropdownMenu.Content>
-			</DropdownMenu.Portal>
-		</DropdownMenu.Root>
-	);
-};
 
 export default DropdownMenuDemo;
