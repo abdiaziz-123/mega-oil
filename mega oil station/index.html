@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mega Oil - Fueling Your Journey</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-  />
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <meta name="description" content="Your website description here">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
+
 <body>
+    <script src="script.js"></script>
  
     <header>
         <nav class="navbar">
@@ -75,69 +77,81 @@
             <img src="ai generated station.jpg" alt="Mega Oil Station">
         </div>
     </section>
+
     <!-- Services Section -->
-    <section class="services">
-        <h2 class="services-title">Our Services</h2>
+    <section class="services-section" id="services">
+        <p class="section-subtitle" id="service-label">What We Do?</p>
+
+        <h2 class="h2 section-title">
+            The service we offer is specifically designed to meet your needs.
+        </h2>
+
         <div class="services-grid">
-            <div class="service">
-              <i class="fa-regular fa-clock" style="color:#ffcd1a;"></i>
-              <h3>24/7 service</h3>
+            <!-- <div class="Services">
+                <i class="fa-regular fa-clock" style="color:#ffcd1a;"></i>
+                <h3>24/7 service</h3>
                 <p>Refuel your vehicle any time of the day or night.</p>
-            </div>
+            </div> -->
             <div class="service">
-              <i class="fa-solid fa-square-parking" style="color: #ffcd1a;"></i>
-              <h3>Parking</h3>
+                <i class="fa-solid fa-square-parking" style="color: #ffcd1a;"></i>
+                <h3>Parking</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quae?</p>
             </div>
             <div class="service">
-              <i class="fab fa-sketch"></i>
-              <h3>Car wash</h3>
+                <i class="fab fa-sketch"></i>
+                <h3>Car wash</h3>
                 <p>Keep your vehicle spotless with our efficient car wash.</p>
             </div>
             <div class="service">
-              <a href="https://www.flaticon.com/free-icons/car-wash" title="car wash icons">Car wash icons created by Flat Icons - Flaticon</a>
-              <h3>Auto care unit</h3>
+                <a href="https://www.flaticon.com/free-icons/car-wash" title="car wash icons">Car wash icons created by
+                    Flat Icons - Flaticon</a>
+                <h3>Auto care unit</h3>
                 <p>Ensure your vehicle is in top shape with our expert care.</p>
             </div>
             <div class="service">
-              <i class="fa-brands fa-facebook-messenger"></i>
+                <i class="fa-brands fa-facebook-messenger"></i>
                 <h3>Lorem ipsum dolor</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quae?</p>
             </div>
         </div>
     </section>
-   
+
     <!-- Contact Form -->
-    <section id="contact" class="contact-section">
-        <h2>Get in Touch</h2>
-        <p>We're here to assist you 24/7</p>
-        <form class="contact-form">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email address *</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <div class="checkbox">
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">I allow this website to store my submission so they can respond to my inquiry. *</label>
-            </div>
-
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
+    <section class="contact-section">
+        <div class="contact-form-container">
+            <h3>Get in Touch</h3>
+            <h2>We're here to assist you 24/7</h2>
+            <form action="#" method="POST" class="contact-form">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email address *</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone number *</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" required>
+                    I allow this website to store my submission so they can respond to my inquiry.
+                </label>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+     
     </section>
 
+    <script src="script.js" defer></script>
+
     <section class="location-section" id="location">
-        <div >
-            <h3>Location</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Mpale, UG</p>
-            <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0886214282477!2d34.17609360000001!3d1.0958208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1778b7fd3e799bb1%3A0x90ea85dd472ea77a!2sMEGA%20OIL%20CO.LTD!5e0!3m2!1sen!2sug!4v1731760290870!5m2!1sen!2sug"
+        <div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0886214282477!2d34.17609360000001!3d1.0958208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1778b7fd3e799bb1%3A0x90ea85dd472ea77a!2sMEGA%20OIL%20CO.LTD!5e0!3m2!1sen!2sug!4v1731760290870!5m2!1sen!2sug"
             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">></iframe>
-            </div>
             </div>
         </div>
     </section>
@@ -146,9 +160,10 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <span style="color: red; font-family: 'YourProfessionalFont', sans-serif; font-weight: bold; display: block; text-align: center;">Mega Oil</span>
-                <p>Your trusted partner for quality fuel and services.
-                since 2014</p>
+                <span
+                    style="color: red; font-family: 'YourProfessionalFont', sans-serif; font-weight: bold; display: block; text-align: center;">Mega
+                    Oil</span>
+                <p>Your trusted partner for quality fuel and services since 2014.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
@@ -165,7 +180,12 @@
                 <p><i class="fas fa-phone"></i> +256 123 456 789</p>
                 <p><i class="fas fa-envelope"></i> info@megaoil.com</p>
             </div>
-          
+            <!-- <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div> -->
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Mega Oil. All rights reserved.</p>
@@ -174,6 +194,7 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
 
 
