@@ -13,70 +13,66 @@
   />
 </head>
 <body>
-  <!-- Navigation -->
-    <nav id="navbar" class="">
-        <div class="nav-wrapper">
-          <!-- Navbar Logo -->
-          <div class="logo">
-            <!-- Logo Placeholder for Inlustration -->
-            <a href="#home" class="logo-link">
-                <i class="logo"></i>
-                <img src="It_Ain_t_Free-02-removebg-preview.png" class="logo-img">
-                <span class="logo-text">Mega Oil</span>
+ 
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="#">
+                <img src="It_Ain_t_Free-02-removebg-preview.png" class="logo-image"> <!-- Added logo image -->
+                mega oil<span>.</span>
             </a>
-          </div>
-      
-          <!-- Navbar Links -->
-          <ul id="menu" class="nav-links">
-            <li><a href="#home">Home</a></li><!--
-         --><li><a href="#services">Services</a></li><!--
-         --><li><a href="#about">About</a></li><!--
-         --><li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      
-      <!-- Menu Icon -->
-      <div class="menuIcon">
-        <span class="icon icon-bars"></span>
-        <span class="icon icon-bars overlay"></span>
-      </div>
-      
-      
-      <div class="overlay-menu">
-        <ul id="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-      </div>
-
-    <!-- Hero Section -->
-    <header class="hero" id="home">
-        <div class="hero-content" >
-            <h1 data-aos="fade-up">Empowering Your Journey</h1>
-            
-            <div class="cta-buttons">
-                <a href="#services" class="cta-button">View Services</a>
-                <a href="https://www.google.com/maps" target="_blank" class="cta-button">Where We Operate</a>
-            </div>
-        </div>
+            <ul class="menu-links">
+                <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+        </nav>
     </header>
+    <section class="hero-section" id="Home">
+        <div class="content">
+            <h2>Empowering Your engine performance</h2>
+            <p>
+                At Mega Oil, we offer exceptional fueling services tailored to your needs. Our state-of-the-art stations ensure a fast and efficient refueling experience, available 24/7 for your convenience.
+            </p>
+            <a href="https://maps.app.goo.gl/NQnTBxEis5TjL9jY7">
+                <button>Find us</button>
+            </a>
+        </div>
+    </section>
+    <script>
+        const header = document.querySelector("header");
+        const hamburgerBtn = document.querySelector("#hamburger-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+        const menuLinks = document.querySelectorAll(".menu-links a");
 
+        // Toggle mobile menu on hamburger button click
+        hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+        // Close mobile menu on close button click
+        closeMenuBtn.addEventListener("click", () => header.classList.remove("show-mobile-menu"));
+
+        // Close mobile menu when a link is clicked
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                header.classList.remove("show-mobile-menu");
+            });
+        });
+    </script>
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="about-content">
-            <div class="text-content">
-                <h1>About Us</h1>
-                <h2>Convenience and quality, always</h2>
-                <p>At Mega Oil, we redefine your fueling experience in Mbale. Our 24/7 service guarantees that you never run out of fuel, no matter the time. With a dedicated auto care unit and a state-of-the-art car wash, we ensure that your vehicle remains in top condition. Enjoy ample parking and swift service that prioritizes your needs, making every visit a breeze. Choose Mega Oil for convenience, quality, and exceptional service, day or night.</p>
-                <a href="#contact" class="link-button">Get in touch</a>
-            </div>
-            <div class="about-image">
-                <img src="ai generated station.jpg" alt="Mega Oil Station" class="about-img">
-            </div>
+            <h2>Fueling Your Journey</h2>
+            <h3>Convenience and quality, always</h3>
+            <p>At Mega Oil, we redefine your fueling experience in Kampala. Our 24/7 service guarantees that you never
+                run out of fuel, no matter the time. With a dedicated auto care unit and a state-of-the-art car wash, we
+                ensure that your vehicle remains in top condition.</p>
+            <p>Enjoy ample parking and swift service that prioritizes your needs, making every visit a breeze. Choose
+                Mega Oil for convenience, quality, and exceptional service, day or night.</p>
+            <a href="#contact" class="get-in-touch">Get in touch</a>
+        </div>
+        <div class="about-image">
+            <img src="ai generated station.jpg" alt="Mega Oil Station">
         </div>
     </section>
     <!-- Services Section -->
