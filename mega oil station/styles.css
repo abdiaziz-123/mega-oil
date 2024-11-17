@@ -305,108 +305,103 @@ html {
     object-fit: cover;
     border-radius: 4px;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-
-
-.container {
-  width: 100%;
-  height: 100%;
-  padding: 0px 8%;
-  background-color: #f8f8f8;
-
+body {
+  background: #ecececdb;
 }
-
-.service { text-align: center; }
-
-.service .section-title { margin-block-end: 50px; }
-
-.container h1::after {
-  content: '';
-  background: #303ef7;
-  width: 100px;
-  height: 5px;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 30px;
-}
-
 .service {
-  text-align: center;
-  padding: 25px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  background: transparent;
-  transition: transform 0.5s, background 0.5s;
+   text-align: center; 
+   margin-bottom: 0;
 }
 
-.service i {
-  font-size: 40px;
-  margin-bottom: 10px;
-  color: #303ef7;
+.service .section-title { 
+  margin-block-end: 50px;
 }
 
-.service h2 {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.service:hover {
-  background: #303ef7;
-  color: #fff;
-  transform: scale(1.05);
-}
-
-.service:hover i {
-  color: #fff;
-}
-
-/* ========================= */
-/* Services Section Styles   */
-/* ========================= */
-.services {
-  padding: 5rem 5%;
-  text-align: center;
-  /* Center the title */
-}
-
-
-/* Services Grid */
-.services-grid {
+.card-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* Create 3 columns for the first row */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1250px;
+  margin: 150px auto;
+  padding: 20px;
   gap: 20px;
-  /* Space between items */
-  justify-items: center;
-  /* Center items in each grid cell */
+  margin-top: 0;
 }
-
-/* Responsive Design for Services Grid */
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-    flex-direction: column;
-    display: flex;
-    /* Change to 2 columns on medium screens */
+.card-list .card-item {
+  background: #fff;
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border 0.5s ease;
+}
+.card-list .card-item:hover {
+  border: 2px solid #f70303;
+}
+.card-list .card-item img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.card-list span {
+  display: inline-block;
+  background: #F7DFF5;
+  margin-top: 32px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  align-content: flex-start;
+}
+.card-list .developer {
+  background-color: #F7DFF5; 
+  color: #2462b2;
+}   
+.card-list .designer {
+  background-color: #d1e8ff;
+  color: #b82828;
+}
+.card-list .editor {
+  background-color: #d6f8d6; 
+  color: #f1d015;
+}
+.card-item h3 {
+  color: #000;
+  font-size: 1.438rem;
+  margin-top: 28px;
+  font-weight: 600;
+}
+.card-item .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-35deg);
+  height: 40px;
+  width: 40px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin-top: 40px;
+  transition: 0.2s ease;
+}
+.card-list .card-item:hover .arrow  {
+  background: #000;
+  color: #fff; 
+}
+@media (max-width: 1200px) {
+  .card-list .card-item {
+      padding: 15px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .card-list {
+      margin: 0 auto;
   }
 }
 
-@media (max-width: 480px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-    /* Stack items on small screens */
-  }
-}
 
 /* Contact Section */
 .contact-section {
