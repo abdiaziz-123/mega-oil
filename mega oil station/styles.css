@@ -411,24 +411,48 @@ html {
 /* Contact Section */
 .contact-section {
   display: flex;
-  justify-content: left;
+  justify-content: space-between; /* Aligns contact details and form side by side */
   align-items: flex-start;
   padding: 40px;
   gap: 20px;
-  
+  position: relative; /* Ensure content is above the overlay */
   background-image: url('cc789772d3f965aba612b6cb6075ef59e40e42b2.jpg');
   background-size: cover;
   background-position: center;
 }
 
+/* Contact Details */
+.contact-details {
+  flex: 1; /* Allow contact details to take available space */
+  color: #fff; /* Text color for visibility */
+  position: relative; /* Ensure it is positioned above the overlay */
+  z-index: 2; /* Higher z-index to place above the overlay */
+}
+
+/* Overlay for better text visibility */
+.contact-section::before {
+    content: ""; /* Keep the overlay for better text visibility */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure overlay is below the content */
+  }
+
+/* Contact Form Container */
 .contact-form-container {
-  background-color: BLUE;
+  background-color: BLUE; /* Original content restored */
   color: #fff;
   padding: 20px;
   border-radius: 8px;
-  width: 100%;
-  max-width: 400px;
 
+  color: #fff;
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 2;
+    width: 800%;
+  max-width: 500px;
 }
 
 .contact-form-container h3 {
@@ -474,7 +498,6 @@ html {
   align-items: center;
   margin-top: 10px;
   font-size: 12px;
-  
 }
 
 .contact-form .checkbox-label input[type="checkbox"] {
@@ -493,8 +516,6 @@ html {
   cursor: pointer;
 }
 
-
-
 .error-message {
   color: #ff6666;
   font-size: 12px;
@@ -508,12 +529,17 @@ html {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-section {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: column; /* Stack elements on smaller screens */
+      align-items: flex-start; /* Align items to the left */
   }
-
+  .contact-details {
+      margin-bottom: 20px; /* Add space between contact details and form */
+      width: 100%; /* Ensure it takes full width */
+  }
+  .contact-form-container {
+      width: 100%; /* Ensure the form also takes full width */
+  }
 }
-
 
 .location-info {
   color: #333;
@@ -622,9 +648,4 @@ footer {
     text-align: left;
 }
 }
-
-
-
-
-
 
